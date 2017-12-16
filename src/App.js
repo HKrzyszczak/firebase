@@ -11,7 +11,7 @@ class App extends Component {
             .then(response => response.json())
             .then((json) => {
             this.setState({
-                    response: JSON.stringify(json),
+                    response: json
                 })
             });
     };
@@ -78,8 +78,23 @@ class App extends Component {
           <div>
               <button onClick={this.clearHandler}>DELETE</button>
           </div>
-
-          <p>{this.state.response}</p>
+          <p>{JSON.stringify(this.state.response)}</p>
+          <p>
+              {
+                  Object.entries(this.state.response)
+                      .map(([key, value]) => (
+                          <p key={key}
+                          style={
+                              value.active ?
+                                  {backgroundColor: 'green'}
+                                  :
+                                  {backgroundColor: 'red'}
+                          }>
+                              {value.name + ' ' + value.lastname}
+                          </p>
+                      ))
+              }
+          </p>
 
       </div>
     );
