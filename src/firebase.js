@@ -8,4 +8,7 @@ var config = {
     storageBucket: "sandbox-c4d82.appspot.com",
     messagingSenderId: "899040876307"
 };
+
 firebase.initializeApp(config);
+
+export const database = firebase.database();

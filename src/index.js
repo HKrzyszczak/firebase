@@ -8,6 +8,7 @@ import AppFirebase from "./AppFirebase";
 ReactDOM.render(
     <div>
         <AppFirebase/>
+        <App/>
     </div>, document.getElementById('root')
 );
 registerServiceWorker();
