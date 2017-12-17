@@ -4,7 +4,7 @@ import {database} from "./firebase";
 class AppFirebase extends Component {
     state = {
         counter: null,
-    }
+    };
 
     componentDidMount() {
         database.ref('/counter')
@@ -13,7 +13,6 @@ class AppFirebase extends Component {
                     counter: snapshot.val(),
                 })
             });
-
     };
 
     incHandle = () => {
@@ -32,17 +31,15 @@ class AppFirebase extends Component {
                 <h1>
                     {this.state.counter}
                 </h1>
-
-                <button onClick={this.incHandle}>
-                    +
-                </button>
                 <button onClick={this.decHandle}>
                     -
+                </button>
+                <button onClick={this.incHandle}>
+                    +
                 </button>
             </div>
         )
     }
-
 }
 
 export default AppFirebase;

@@ -31,12 +31,13 @@ class App extends Component {
     putHandler = () => {
         fetch('https://ad-snadbox.firebaseio.com/users/henryk.json', {
             method: 'PUT',
-            body: JSON.stringify({
-                name: 'Henryk',
-                lastname: 'Krzyszczak',
-                active: false
-
-            })
+            body: JSON.stringify(
+                {hhhh: {
+                    name: 'Henryk',
+                    lastname: 'Krzyszczak',
+                    active: false
+                }
+            })  
         })
 
     };
@@ -44,12 +45,13 @@ class App extends Component {
     patchHandle = () => {
         fetch('https://ad-snadbox.firebaseio.com/users/henryk.json', {
             method: 'PATCH',
-            body: JSON.stringify({
-                name: 'Henryk',
-                lastname: 'Krzyszczak',
-                active: true
-
-            })
+            body: JSON.stringify(
+                {hhhh: {
+                    name: 'Henryk',
+                    lastname: 'Krzyszczak',
+                    active: true
+                }
+                })
         })
     }
 
@@ -79,6 +81,24 @@ class App extends Component {
               <button onClick={this.clearHandler}>DELETE</button>
           </div>
           <p>{JSON.stringify(this.state.response)}</p>
+          <div>
+              {
+                  this.state.response && Object.entries(this.state.response)
+                      .map(([key, value]) => (
+                          <p
+                              key={key}
+                              style={
+                                  value.active ?
+                                      {backgroundColor: 'green'}
+                                      :
+                                      {backgroundColor: 'red'}
+                              }
+                          >
+                              {value.name + ' ' + value.lastname}
+                          </p>
+                      ))
+              }
+          </div>
 
 
       </div>
