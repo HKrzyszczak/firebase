@@ -7,7 +7,7 @@ class Task11 extends Component {
     componentDidMount() {
         database.ref('/my/first/path')
             .set( 'it works')
-            .on(() => console.log('Saved :-)'))
+            .then(() => console.log('Saved :-)'))
             .catch(() => console.log('ERROR! Nothing saved!!!'))
             };
 

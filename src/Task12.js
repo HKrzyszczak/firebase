@@ -9,7 +9,7 @@ class Task12 extends Component {
             name: 'Henryk',
             surname: 'Krzyszczak',
                 age: 37,})
-            .on(() => console.log('My personal data is set!'))
+            .then(() => console.log('My personal data is set!'))
             .catch(() => console.log('ERROR! Nothing saved!!!'))
     };
 

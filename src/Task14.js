@@ -3,15 +3,9 @@ import { database } from "./firebase";
 
 class Task14 extends Component {
 
-    componentDidMount() {
-        // database.ref('/array')
-        //     .set( [1, 2, 3]);
-    };
-
     deleteHandle = () => {
         database.ref('/')
             .remove();
-
     };
 
     render() {
