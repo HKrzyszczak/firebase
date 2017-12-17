@@ -6,12 +6,15 @@ import registerServiceWorker from './registerServiceWorker';
 import AppFirebase from "./AppFirebase";
 import Task11 from "./Task11";
 import Task12 from "./Task12";
+import Task13 from "./Task13";
 
 ReactDOM.render(
     <div>
         <Task11/>
         <hr />
         <Task12/>
+        <hr />
+        <Task13/>
         <hr />
         <AppFirebase/>
         <hr />

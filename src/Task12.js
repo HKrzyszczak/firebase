@@ -15,7 +15,7 @@ class Task12 extends Component {
     render() {
         return (
             <div>
-
+                Save object to db
             </div>
         )
     }

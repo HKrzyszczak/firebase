@@ -37,7 +37,7 @@ class App extends Component {
                     lastname: 'Krzyszczak',
                     active: false
                 }
-            })  
+            })
         })
 
     };
@@ -80,7 +80,6 @@ class App extends Component {
           <div>
               <button onClick={this.clearHandler}>DELETE</button>
           </div>
-          <p>{JSON.stringify(this.state.response)}</p>
           <div>
               {
                   this.state.response && Object.entries(this.state.response)
