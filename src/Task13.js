@@ -5,7 +5,9 @@ class Task13 extends Component {
 
     componentDidMount() {
         database.ref('/array')
-            .set( [1, 2, 3]);
+            .set( [1, 2, 3])
+            .on(() => console.log('Array is set!'))
+            .catch(() => console.log('ERROR! Nothing saved!!!'));
     };
 
 
