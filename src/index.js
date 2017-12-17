@@ -7,6 +7,7 @@ import AppFirebase from "./AppFirebase";
 import Task11 from "./Task11";
 import Task12 from "./Task12";
 import Task13 from "./Task13";
+import Task14 from "./Task14";
 
 ReactDOM.render(
     <div>
@@ -15,6 +16,8 @@ ReactDOM.render(
         <Task12/>
         <hr />
         <Task13/>
+        <hr />
+        <Task14/>
         <hr />
         <AppFirebase/>
         <hr />
